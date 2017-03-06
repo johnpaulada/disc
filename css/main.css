@@ -1,0 +1,137 @@
+body {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 18pt;
+}
+
+h1, h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-size: 64pt;
+}
+
+h2 {
+    font-size: 24pt;
+    margin-bottom: 10px;
+    margin-top: 1em;
+}
+
+ol {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-flow: column;
+}
+
+li {
+    list-style: none;
+}
+
+ul > li {
+    margin-top: 10px;
+}
+
+form {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+input[name="name"] {
+    width: 25vw;
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background-color: #FAFAFA;
+    color: #555;
+}
+
+input[name="name"]:focus {
+    border: 2px #2196F3 solid;
+}
+
+span.question {
+    font-family: "Quattrocento", serif;
+}
+
+span.answer {
+    font-family: "Fanwood Text", serif;
+    margin-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-container > button {
+    margin-right: 5px;
+}
+
+.button {
+    font-family: "Open Sans", sans-serif;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #EEE;
+    border: none;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.button:hover {
+    background-color: #f1c40f;
+}
+
+.disabled {
+    background-color: #7f8c8d;
+    transition: all 0.25s;
+}
+
+.disabled:hover {
+    background-color: #95a5a6;
+}
+
+.purple-bg {
+    background-color: #8e44ad;
+    color: #ecf0f1;
+    transition: all 0.25s;
+}
+
+.purple-bg:hover {
+    background-color: #9b59b6;
+}
+
+#chart-container {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+}
+
+#chart-container > div {
+    width: 50vw;
+    height: 50vw;
+}
+
+#name {
+    margin-top: 1em;
+    font-size: 48pt;
+}

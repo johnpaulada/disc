@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DISC</title>
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./lib/vue.min.js"></script>
+        <script src="./lib/Chart.min.js"></script>
+        <script src="./js/show-all-tooltips.js"></script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <section id="app">
+            <h1>DISC</h1>
+            <form v-if="view == 'form-view'">
+                <input type="text" name="name" placeholder="Your name" v-model="name">
+                <ol>
+                    <li v-if="currentQuestion == questionIndex" v-for="question, questionIndex in questions">
+                        <span class="question">{{questionIndex+1}}. {{question.question}}</span>
+                        <ul>
+                            <li v-for="answer, answerIndex in question.answers">
+                                <button class="button most"
+                                v-bind:class="{
+                                    'purple-bg':
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == 'most',
+                                    'disabled':
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == 'least' ||
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == ''
+                                }"
+                                v-on:click.prevent="pressedMost(answerIndex)"
+                                >Most</button><button class="button least" v-bind:class="{
+                                    'purple-bg':
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == 'least',
+                                    'disabled':
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == 'most' ||
+                                        questions[questionIndex]
+                                        .answers[answerIndex]
+                                        .selected == '',
+                                }"
+                                v-on:click.prevent="pressedLeast(answerIndex)"
+                                >Least</button>
+                                <span class="answer">{{answer.answer}}</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="button-container">
+                    <button v-on:click.prevent="pressedBack"
+                            v-if="currentQuestion > 0"
+                    class="button" name="back">Back</button>
+                    <button v-on:click.prevent="pressedNext"
+                            v-if="currentQuestion < questions.length-1"
+                    class="button" name="next">Next</button>
+                    <button v-on:click.prevent="pressedSubmit"
+                            v-if="currentQuestion === questions.length-1"
+                    class="button" name="submit">Submit</button>
+                </div>
+            </form>
+            <h2 id="name">{{name}}</h2>
+            <div id="chart-container">
+                <div class="">
+                    <canvas id="most-chart" width="0" height="0"></canvas>
+                </div>
+                <div class="">
+                    <canvas id="least-chart" width="0" height="0"></canvas>
+                </div>
+            </div>
+        </section>
+        <footer>
+        </footer>
+        <script src="./js/disc-data.js"></script>
+        <script src="./js/init.js"></script>
+    </body>
+</html>

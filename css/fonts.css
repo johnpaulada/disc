@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Quattrocento";
+    src: url('../fonts/quattrocento/Quattrocento-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Quattrocento";
+    font-weight: bold;
+    src: url('../fonts/quattrocento/Quattrocento-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Fanwood Text";
+    src: url('../fonts/fanwoodtext/FanwoodText-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/opensans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-weight: lighter;
+    src: url('../fonts/opensans/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url('../fonts/oswald/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Oswald";
+    font-weight: bold;
+    src: url('../fonts/oswald/Oswald-Bold.ttf');
+}
