@@ -1,6 +1,10 @@
 # DISC
 Know your DISC personality traits to know how to relate to people better.
 
+[![forthebadge](http://forthebadge.com/images/badges/made-with-vue.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/check-it-out.svg)](http://forthebadge.com)
+
 DISC stands for:
 
 * [Dominant](https://www.discinsights.com/personality-style-d) - (Active, Task-Oriented)
